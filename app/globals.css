@@ -1,0 +1,49 @@
+@import url("https://fonts.bunny.net/css?family=plus-jakarta-sans:300,400,500,600,700|playfair-display:400,500,600,700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+}
+
+@layer base {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #fef3c7;
+  color: #78350f;
+}
+
+.dark ::selection {
+  background-color: #78350f;
+  color: #fef3c7;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
