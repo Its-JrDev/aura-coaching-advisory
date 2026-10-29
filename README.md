@@ -4,6 +4,18 @@ High-performance executive coaching and strategic advisory platform built with *
 
 ---
 
+## 📖 Deployment Guide & CI/CD
+
+For a complete step-by-step tutorial on deploying to Cloudflare Pages, configuring custom domains, and setting up automated CI/CD:
+👉 **[Guía Paso a Paso de Despliegue en Cloudflare Pages](./CLOUDFLARE_DEPLOYMENT_GUIDE.md)**
+
+### CI/CD Pipeline
+This repository includes a GitHub Actions CI/CD workflow (`.github/workflows/ci-cd.yml`):
+- **On Pull Request & Push:** Runs TypeScript checks, Next.js build verification, and OpenNext bundling.
+- **On Push to `main`:** Automatically deploys to Cloudflare when `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets are added to GitHub repository secrets.
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
